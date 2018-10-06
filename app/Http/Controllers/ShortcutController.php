@@ -19,6 +19,12 @@ class ShortcutController extends Controller
         return view('shortcut.index', compact('shortcuts'));
     }
 
+    public function admin()
+    {
+        $shortcuts = Shortcut::orderBy('id', 'asc')->get();
+        return view('shortcut.admin', compact('shortcuts'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -42,7 +48,7 @@ class ShortcutController extends Controller
             'description' => $request->input('description')
         ]);
 
-        return redirect()->route('shortcut_index');
+        return redirect()->route('shortcut_admin');
     }
 
     /**
@@ -62,9 +68,10 @@ class ShortcutController extends Controller
      * @param  \App\Shortcut  $shortcut
      * @return \Illuminate\Http\Response
      */
-    public function edit(Shortcut $shortcut)
+    public function edit($id)
     {
-        //
+        $shortcut = Shortcut::findOrFail($id);
+        return view('shortcut.edit', compact('shortcut'));
     }
 
     /**
@@ -74,9 +81,15 @@ class ShortcutController extends Controller
      * @param  \App\Shortcut  $shortcut
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Shortcut $shortcut)
+    public function update(Request $request, $id)
     {
-        //
+        $shortcut = Shortcut::findOrFail($id);
+        $shortcut->update([
+            'name' => $request->input('name'),
+            'description' => $request->input('description')
+        ]);
+
+        return redirect()->route('shortcut_admin');
     }
 
     /**
@@ -88,6 +101,6 @@ class ShortcutController extends Controller
     public function destroy($id)
     {
         Shortcut::find($id)->delete();
-        return $this->index();
+        return redirect()->route('shortcut_admin');
     }
 }

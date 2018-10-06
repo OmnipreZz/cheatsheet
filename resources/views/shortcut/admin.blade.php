@@ -17,7 +17,10 @@
       <th scope="row">{{$shortcut->id}}</th>
       <th>{{$shortcut->name}}</th>
       <td>{{$shortcut->description}}</td>
-      <td><a href="{{route('shortcut_destroy', $shortcut->id)}}" class="btn btn-primary" role="button" title="Supprimer"><i class="fas fa-trash-alt"></i></a></td>
+      <td>
+        <a href="{{route('shortcut_destroy', $shortcut->id)}}" class="btn btn-primary" role="button" title="Supprimer"><i class="fas fa-trash-alt"></i></a>
+        <a href="{{route('shortcut_edit', $shortcut->id)}}" class="btn btn-primary" role="button" title="Supprimer"><i class="fas fa-edit-alt"></i></a>
+      </td>
     </tr>
     @endforeach
   </tbody>

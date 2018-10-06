@@ -35,7 +35,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                                <a class="nav-link" href="{{ route('shortcut_create') }}">{{ __('Create') }}</a>
+                            <a class="nav-link" href="{{ route('shortcut_admin') }}">{{ __('Shortcut') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('shortcut_create') }}">{{ __('Create') }}</a>
                         </li>
                     </ul>
 

@@ -21,13 +21,15 @@ Route::get('/', 'HomeController@index' )->name('shortcut_index');
 
 Auth::routes();
 
-Route::get('/admin', 'AdminController@index' )->name('');
+Route::get('/admin', 'AdminController@index' );
 
+// shortcuts admin index 
+Route::get('/admin/shortcut', 'ShortcutController@admin' )->name('shortcut_admin')->middleware('auth');
 // shortcuts create 
-Route::get('admin/shortcut/create','ShortcutController@create')->name('shortcut_create')->middleware('auth');
-Route::post('admin/shortcut/store','ShortcutController@store')->name('shortcut_store')->middleware('auth');
-
+Route::get('/admin/shortcut/create', 'ShortcutController@create')->name('shortcut_create')->middleware('auth');
+Route::post('/admin/shortcut/store', 'ShortcutController@store')->name('shortcut_store')->middleware('auth');
 // shortcuts edit
-
+Route::get('/admin/shortcut/edit{id}', 'ShortcutController@edit')->name('shortcut_edit')->middleware('auth');
+Route::post('/admin/shortcut/update{id}', 'ShortcutController@update')->name('shortcut_update')->middleware('auth');
 // shortcuts destroy
-Route::get('admin/shortcut/destroy/{id}','ShortcutController@destroy')->name('shortcut_destroy')->middleware('auth');
+Route::get('/admin/shortcut/destroy/{id}', 'ShortcutController@destroy')->name('shortcut_destroy')->middleware('auth');
