@@ -13,8 +13,10 @@
 
 ///////////////////////////APP///////////////////////////
 
-Route::get('/', 'HomeController@index' );
-Route::get('/home', 'ShortcutController@index' )->name('shortcut_index');
+Route::get('/', 'AppController@index' );
+
+// shorcuts index
+Route::get('/raccourci', 'ShortcutController@index' )->name('shortcut_index');
 
 
 

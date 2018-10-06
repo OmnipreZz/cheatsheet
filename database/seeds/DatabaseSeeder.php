@@ -17,11 +17,11 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin')
         ]);
 
-        DB::table('categories')->insert([
+        DB::table('shortcutcategories')->insert([
             'name' => "Universel"
         ]);
 
-        DB::table('categories')->insert([
+        DB::table('shortcutcategories')->insert([
             'name' => "VSCode"
         ]);
 
