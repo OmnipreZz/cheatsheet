@@ -7,11 +7,11 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Créer un raccourci
+                    Créer une commande
                 </div>
                 <div class="card-body">
 
-                    <form method="POST" action="{{ route('shortcut_store') }}" aria-label="">
+                    <form method="POST" action="{{ route('command_store') }}" aria-label="">
                         @csrf
 
                         <div class="form-group row">

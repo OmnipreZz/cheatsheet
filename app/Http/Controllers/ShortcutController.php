@@ -54,7 +54,9 @@ class ShortcutController extends Controller
     public function edit($id)
     {
         $shortcut = Shortcut::findOrFail($id);
-        return view('shortcut.edit', compact('shortcut'));
+        $categories = Shortcutcategory::all();
+        $hisCategory = $shortcut->category;
+        return view('shortcut.edit', compact('shortcut', 'categories', 'hisCategory'));
     }
 
     
@@ -63,7 +65,8 @@ class ShortcutController extends Controller
         $shortcut = Shortcut::findOrFail($id);
         $shortcut->update([
             'name' => $request->input('name'),
-            'description' => $request->input('description')
+            'description' => $request->input('description'),
+            'category_id' => $request->input('category')
         ]);
 
         return redirect()->route('shortcut_admin');

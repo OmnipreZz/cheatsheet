@@ -45,6 +45,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('shortcut_index') }}">{{ __('Shortcut') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('command_index') }}">{{ __('Command') }}</a>
+                        </li>
                     </ul>
                 </div>
             </div>

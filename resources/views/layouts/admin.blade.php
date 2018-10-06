@@ -40,6 +40,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('shortcut_admin') }}">{{ __('Shortcut') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('command_admin') }}">{{ __('Command') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

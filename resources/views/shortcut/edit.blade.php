@@ -32,6 +32,21 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="category"class="col-md-4 col-form-label text-md-right">Catégories</label>
+                            <select name="category" class="form-control col-md-6" id="category">
+                                @foreach($categories as $id => $category)
+                                <option value="{{$id}}"
+                                @if ($hisCategory->id == $id)
+                                    {{'selected'}}
+                                @endif
+                                >
+                                {{$category->name}}
+                                </option>
+                                @endforeach
+                            </select>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

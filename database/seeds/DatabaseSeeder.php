@@ -48,6 +48,32 @@ class DatabaseSeeder extends Seeder
             'description' => "coller",
             'category_id' => 1
         ]);
+
+        DB::table('commands')->insert([
+            'name' => "make:auth",
+            'description' => "Authentification",
+            'category_id' => 1
+        ]);
+
+        DB::table('commands')->insert([
+            'name' => "make:controller",
+            'description' => "Créer un controlleur",
+            'category_id' => 1
+        ]);
+
+        DB::table('commands')->insert([
+            'name' => "make:migration",
+            'description' => "Créer une table",
+            'category_id' => 1
+        ]);
+
+        DB::table('commandcategories')->insert([
+            'name' => "Laravel"
+        ]);
+
+        DB::table('commandcategories')->insert([
+            'name' => "Symfony"
+        ]);
         
     }
     
