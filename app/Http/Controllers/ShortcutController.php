@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Shortcut;
+use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 
 class ShortcutController extends Controller
@@ -18,14 +22,16 @@ class ShortcutController extends Controller
 
     public function admin()
     {
-        $shortcuts = Shortcut::orderBy('name', 'asc')->get();
-        return view('shortcut.admin', compact('shortcuts'));
+        $shortcuts = Shortcut::with('category')->orderBy('name', 'asc')->get();
+        $categories = Category::all();
+        return view('shortcut.admin', compact('shortcuts', 'categories'));
     }
 
 
     public function create()
     {
-        return view('shortcut.create');
+        $categories = Category::all();
+        return view('shortcut.create', compact('categories'));
     }
 
     
@@ -33,7 +39,8 @@ class ShortcutController extends Controller
     {
         $shortcut = Shortcut::create([
             'name' => $request->input('name'),
-            'description' => $request->input('description')
+            'description' => $request->input('description'),
+            'category_id' => $request->input('category')
         ]);
 
         return redirect()->route('shortcut_admin');

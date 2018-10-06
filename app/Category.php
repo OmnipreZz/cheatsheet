@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Shortcut extends Model
+class Category extends Model
 {
     use Notifiable;
 
@@ -15,11 +15,11 @@ class Shortcut extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'category_id'
+        'name'
     ];
 
-    public function category()
+    public function shortcuts()
     {
-    	return $this->belongsTo('App\Category');
+    	return $this->hasMany('App\Shortcut');
     }
 }

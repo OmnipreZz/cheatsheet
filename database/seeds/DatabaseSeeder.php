@@ -11,6 +11,44 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::table('users')->insert([
+            'name' => "admin",
+            'email' => 'admin@admin.com',
+            'password' => bcrypt('admin')
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => "Universel"
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => "VSCode"
+        ]);
+
+        DB::table('shortcuts')->insert([
+            'name' => "Ctrl + A",
+            'description' => "tout selectionner",
+            'category_id' => 1
+        ]);
+
+        DB::table('shortcuts')->insert([
+            'name' => "Ctrl + C",
+            'description' => "copier",
+            'category_id' => 1
+        ]);
+
+        DB::table('shortcuts')->insert([
+            'name' => "Ctrl + X",
+            'description' => "couper",
+            'category_id' => 1
+        ]);
+
+        DB::table('shortcuts')->insert([
+            'name' => "Ctrl + V",
+            'description' => "coller",
+            'category_id' => 1
+        ]);
+        
     }
+    
 }

@@ -4,7 +4,7 @@ This query will take effect for any screen smaller than 760px
 and also iPads specifically.
 */
 @media 
-only screen and (max-width: 792px) {
+only screen and (max-width: 767px) {
 
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
