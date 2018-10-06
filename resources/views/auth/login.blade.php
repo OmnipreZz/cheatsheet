@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>OmniScience : Login</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -27,8 +28,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center my-5">
-                <h1>CheatSheet<h1>
-                <h3>Admin</h3>
+                <h1 id="loginTitle">OmniScience<h1>
+                <h3>Commands and Shortcuts</h3>
+                <h5>Session Admin</h5>
             </div>  
                 <form method="POST" action="{{ route('login') }}" class="mx-auto">
                     @csrf

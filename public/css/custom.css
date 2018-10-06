@@ -1,3 +1,14 @@
+.navbar-brand {
+	font-family: 'Audiowide', cursive;
+}
+		
+#loginTitle {
+	font-size: 6em;
+	font-family: 'Audiowide', cursive;
+}
+
+
+
 /* 
 Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px
