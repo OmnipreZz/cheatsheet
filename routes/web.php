@@ -12,22 +12,21 @@
 */
 
 ///////////////////////////APP///////////////////////////
-
 Route::get('/', 'AppController@index' );
 
 // shorcuts index
-Route::get('/raccourci', 'ShortcutController@index' )->name('shortcut_index');
+Route::get('/shortcut', 'ShortcutController@index' )->name('shortcut_index');
 
 // commands index
-Route::get('/commande', 'CommandController@index' )->name('command_index');
+Route::get('/command', 'CommandController@index' )->name('command_index');
 
 
 
 ///////////////////////////ADMIN///////////////////////////
-
 Auth::routes();
 
-Route::get('/admin', 'AdminController@index' );
+Route::get('/admin', 'AdminController@index' )->middleware('auth');
+Route::get('/register', 'AdminController@register' )->name('admin_register')->middleware('auth');
 
 // shortcuts admin index 
 Route::get('/admin/shortcut', 'ShortcutController@admin' )->name('shortcut_admin')->middleware('auth');

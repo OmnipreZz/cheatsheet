@@ -25,4 +25,9 @@ class AdminController extends Controller
     {
         return view('admin.home');
     }
+
+    public function register()
+    {
+        return view('auth.register');
+    }
 }
