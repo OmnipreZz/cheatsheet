@@ -2,14 +2,18 @@
 
 @section('content')
 
-<div class="mb-4 ml-4">
-  <a class="btn btn-secondary" role="button" href="{{ route('command_create') }}" title="Nouvelle commande"><i class="fas fa-plus fa-2x"></i></a>  
+<div class="ml-4">
+  <a class="btn btn-secondary" role="button" href="{{ route('command_create') }}" title="Nouvelle commande"><i class="fas fa-plus fa-2x"></i></a>
+</div>
+
+<div class="text-center text-secondary">
+  <h1>Commandes</h1>
 </div>
 
 <table class="table table-sm table-bordered table-condensed table-striped">
   <thead>
     <tr class="bg-secondary text-white">
-      <th scope="col">Nom</th>
+      <th scope="col">Commande</th>
       <th scope="col">Description</th>
       <th scope="col">Catégorie</th>
       <th scope="col"></th>

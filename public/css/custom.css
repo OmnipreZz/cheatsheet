@@ -1,19 +1,19 @@
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////App OmniScience//////////////////////////////// */
 .navbar-brand {
 	font-family: 'Audiowide', cursive;
 }
-		
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////Login Page//////////////////////////////// */	
 #loginTitle {
 	font-size: 6em;
 	font-family: 'Audiowide', cursive;
 }
-
-
-
-/* 
-Max width before this PARTICULAR table gets nasty
-This query will take effect for any screen smaller than 760px
-and also iPads specifically.
-*/
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////Media Responsiv Table//////////////////////////////// */
 @media 
 only screen and (max-width: 767px) {
 
@@ -38,6 +38,23 @@ only screen and (max-width: 767px) {
 		position: relative;
 		padding-left: 50%; 
 	}
+}
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////@MEDIA//////////////////////////////// */
+@media (max-width: 1199px) {
 
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 400px) {
+    
 }
 

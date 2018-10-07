@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand text-secondary" href="{{ url('/admin') }}">
                     OmniScience
                 </a>
                 <p class="navbar-text">Commands and Shorcuts</p>
@@ -37,16 +37,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('shortcut_admin') }}">{{ __('Shortcut') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('command_admin') }}">{{ __('Command') }}</a>
-                        </li>
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('shortcut_admin') }}">{{ __('Raccourcis') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('command_admin') }}">{{ __('Commandes') }}</a>
+                            </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -81,7 +82,7 @@
             </div>
         </nav>
 
-        <main>
+        <main class="py-4">
             @yield('content')
         </main>
     </div>
