@@ -74,6 +74,14 @@ class DatabaseSeeder extends Seeder
         DB::table('commandcategories')->insert([
             'name' => "Symfony"
         ]);
+
+        DB::table('commandcategories')->insert([
+            'name' => "Linux"
+        ]);
+
+        DB::table('commandcategories')->insert([
+            'name' => "Git"
+        ]);
         
     }
     

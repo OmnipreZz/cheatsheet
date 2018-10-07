@@ -2,7 +2,7 @@
 
 @section('content')
 
-<table class="table table-sm table-bordered table-condensed">
+<table class="table table-sm table-bordered table-condensed table-striped">
   <thead>
     <tr class="bg-secondary text-white">
       <th scope="col">Nom</th>

@@ -6,7 +6,7 @@
   <a class="btn btn-secondary" role="button" href="{{ route('command_create') }}" title="Nouvelle commande"><i class="fas fa-plus fa-2x"></i></a>  
 </div>
 
-<table class="table table-sm table-bordered table-condensed">
+<table class="table table-sm table-bordered table-condensed table-striped">
   <thead>
     <tr class="bg-secondary text-white">
       <th scope="col">Nom</th>

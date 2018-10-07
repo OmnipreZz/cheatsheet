@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand text-secondary" href="{{ url('/') }}">
                     OmniScience
                 </a>
                 <p class="navbar-text">Commands and Shorcuts</p>
@@ -43,17 +43,17 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('shortcut_index') }}">{{ __('Shortcut') }}</a>
+                            <a class="nav-link" href="{{ route('shortcut_index') }}">{{ __('Raccourcis') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('command_index') }}">{{ __('Command') }}</a>
+                            <a class="nav-link" href="{{ route('command_index') }}">{{ __('Commandes') }}</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
