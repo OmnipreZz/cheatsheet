@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>OmniScience</title>
+    <title>OmniScience - Commands & Shortcuts</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
