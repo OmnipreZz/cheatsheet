@@ -9,7 +9,7 @@
 
 # Projet OmniScience - Commands and Shorcuts
 
-CheatSheet en Ligne pour les commandes terminal et les raccourcis clavier. Un compte admin peut créer/éditer/supprimer des commandes, des raccourcis et des catégories.
+CheatSheet en Ligne pour les commandes du terminal et les raccourcis clavier. Un compte admin peut créer/éditer/supprimer des commandes, des raccourcis et des catégories.
 
 
 
@@ -17,7 +17,7 @@ CheatSheet en Ligne pour les commandes terminal et les raccourcis clavier. Un co
 
 - git clone https://github.com/OmnipreZz/cheatsheet.git
 - composer install
-- renomer le fichier (.env.example) en fichier (.env)
+- renommer le fichier (.env.example) en fichier (.env)
 - définir une clé d'application [php artisan key:generate](https://laravel.com/docs/5.7/installation#configuration)
 - dans le fichier (.env) remplacer les champs de connection mysql par sa DB localhost
 - créer la DB et les seeders [php artisan migrate:refresh --seed](https://laravel.com/docs/5.7/migrations)
@@ -43,9 +43,9 @@ Accés Admin :
 
 ## DB Actuelle
 
-Plutot simple une table pour les raccourcis avec ses catégories associées, même chose pour les commandes.
+Plutôt simple une table pour les raccourcis avec ses catégories associées, même chose pour les commandes.
 
 - Table shortcuts
 - Table shortcutcategories
 - Table commands
-- Table commandCategories
+- Table commandcategories
