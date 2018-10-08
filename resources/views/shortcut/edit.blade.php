@@ -36,13 +36,12 @@
                             <label for="category"class="col-md-4 col-form-label text-md-right">Catégories</label>
                             <select name="category" class="form-control col-md-6" id="category">
                                 @foreach($categories as $id => $category)
-                                <option value="{{$id}}"
-                                @if ($hisCategory->id == $id)
-                                    {{'selected'}}
+                                <option value="{{$category->id}}"
+                                @if ($hisCategory->id == $category->id)
+                                {{'selected'}}
                                 @endif
-                                >
-                                {{$category->name}}
-                                </option>
+
+                                >{{$category->name}}</option>
                                 @endforeach
                             </select>
                         </div>
