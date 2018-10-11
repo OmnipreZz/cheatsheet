@@ -20,6 +20,7 @@ CheatSheet en Ligne pour les commandes du terminal et les raccourcis clavier. Un
 - renommer le fichier (.env.example) en fichier (.env)
 - définir une clé d'application [php artisan key:generate](https://laravel.com/docs/5.7/installation#configuration)
 - dans le fichier (.env) remplacer les champs de connection mysql par sa DB localhost
+- composer dump-autoload
 - créer la DB et les seeders [php artisan migrate:refresh --seed](https://laravel.com/docs/5.7/migrations)
 - lancer l'application [php artisan serve](https://laravel.com/docs/5.7/installation#configuration)
 
