@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Edité une catégorie de raccourci
+                    <h2 class="text-secondary">Modifier une catégorie de raccourci</h2>
                 </div>
                 <div class="card-body">
 

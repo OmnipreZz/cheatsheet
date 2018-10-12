@@ -15,14 +15,16 @@ class ShortcutController extends Controller
     {
         $shortcuts = Shortcut::with('category')->where('category_id', 1)->orderBy('name')->get();
         $categories = Shortcutcategory::all();
-        return view('shortcut.index', compact('shortcuts', 'categories'));
+        $hisCategory = 1;
+        return view('shortcut.index', compact('shortcuts', 'categories', 'hisCategory'));
     }
 
     public function indexByCat(Request $request)
     {
         $categories = Shortcutcategory::all();
         $shortcuts = Shortcut::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
-        return view('shortcut.index', compact('shortcuts', 'categories'));
+        $hisCategory = $request->input('category');
+        return view('shortcut.index', compact('shortcuts', 'categories', 'hisCategory'));
     }
 
 
@@ -30,14 +32,16 @@ class ShortcutController extends Controller
     {
         $shortcuts = Shortcut::with('category')->where('category_id', 1)->orderBy('name')->get();
         $categories = Shortcutcategory::all();
-        return view('shortcut.admin', compact('shortcuts', 'categories'));
+        $hisCategory = 1;
+        return view('shortcut.admin', compact('shortcuts', 'categories', 'hisCategory'));
     }
 
     public function adminByCat(Request $request)
     {
         $categories = Shortcutcategory::all();
         $shortcuts = Shortcut::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
-        return view('shortcut.admin', compact('shortcuts', 'categories'));
+        $hisCategory = $request->input('category');
+        return view('shortcut.admin', compact('shortcuts', 'categories', 'hisCategory'));
     }
 
 

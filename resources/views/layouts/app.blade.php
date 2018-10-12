@@ -16,8 +16,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Inconsolata|Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -44,17 +43,17 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('shortcut_index') }}">{{ __('Raccourcis') }}</a>
+                            <a class="btn btnGreen text-white mr-1" type="button" href="{{ route('command_index') }}">{{ __('Commandes') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('command_index') }}">{{ __('Commandes') }}</a>
+                            <a class="btn btnGreen text-white" type="button" href="{{ route('shortcut_index') }}">{{ __('Raccourcis') }}</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main>
+        <main class="py-4">
             @yield('content')
         </main>
     </div>

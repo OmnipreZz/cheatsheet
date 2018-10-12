@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Créer une catégorie de commande
+                    <h2 class="text-secondary">Créer une catégorie de commande</h2>
                 </div>
                 <div class="card-body">
 

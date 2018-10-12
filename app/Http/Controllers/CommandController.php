@@ -12,28 +12,32 @@ class CommandController extends Controller
     {
         $commands = Command::with('category')->where('category_id', 1)->orderBy('name')->get();
         $categories = Commandcategory::all();
-        return view('command.index', compact('commands', 'categories'));
+        $hisCategory = 1;
+        return view('command.index', compact('commands', 'categories', 'hisCategory'));
     }
 
     public function indexByCat(Request $request)
     {
         $categories = Commandcategory::all();
         $commands = Command::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
-        return view('command.index', compact('commands', 'categories'));
+        $hisCategory = $request->input('category');
+        return view('command.index', compact('commands', 'categories', 'hisCategory'));
     }
 
     public function admin()
     {
         $commands = Command::with('category')->where('category_id', 1)->orderBy('name')->get();
         $categories = Commandcategory::all();
-        return view('command.admin', compact('commands', 'categories'));
+        $hisCategory = 1;
+        return view('command.admin', compact('commands', 'categories', 'hisCategory'));
     }
 
     public function adminByCat(Request $request)
     {
         $categories = Commandcategory::all();
         $commands = Command::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
-        return view('command.admin', compact('commands', 'categories'));
+        $hisCategory = $request->input('category');
+        return view('command.admin', compact('commands', 'categories', 'hisCategory'));
     }
 
 
@@ -53,12 +57,6 @@ class CommandController extends Controller
         ]);
 
         return redirect()->route('command_admin');
-    }
-
-    
-    public function show(Command $command)
-    {
-        //
     }
 
     

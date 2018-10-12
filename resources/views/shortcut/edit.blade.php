@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Créer un raccourci
+                    <h2 class="text-secondary">Modifier un raccourci</h2>
                 </div>
                 <div class="card-body">
 

@@ -7,11 +7,20 @@
 	text-shadow: 2px 2px #4cd137;
 }
 
+.btnGreen {
+	background-color: #4cd137;
+}
+
+.btnGreen:hover {
+	background-color: #44bd32;
+}
+
 .btnHome {
 	width: 25vw;
 	height: 12vh;
 	background-color: #4cd137;
 	border-radius: 25px;
+	font-family: 'Inconsolata', monospace;
 }
 
 .btnHome:hover {
@@ -25,6 +34,15 @@
 
 .navbar-brand {
 	font-family: 'Audiowide', cursive;
+}
+
+.btnAdmin {
+	width: 200px;
+	background-color: #4cd137;
+}
+
+.btnAdmin:hover {
+	background-color: #44bd32;
 }
 /* /////////////////// */
 /* ///////// */
@@ -83,7 +101,10 @@ only screen and (max-width: 767px) {
 }
 
 @media (max-width: 400px) {
-    
+    .btnAdmin {
+		width: 160px;
+		font-size: 12px;
+	}
 }
 
 
