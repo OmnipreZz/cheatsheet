@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="pt-4">
-  <form method="POST" action="{{ route('command_store') }}" aria-label="">
+  <form method="POST" action="{{ route('shortcut_category') }}" aria-label="">
     @csrf
       <div class="form-group row formMedia">
           <select name="category" class="form-control col-md-3 offset-md-1" id="category">

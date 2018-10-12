@@ -13,15 +13,30 @@ class ShortcutController extends Controller
 
     public function index()
     {
-        $shortcuts = Shortcut::with('category')->orderBy('name', 'asc')->get();
+        $shortcuts = Shortcut::with('category')->where('category_id', 1)->orderBy('name')->get();
         $categories = Shortcutcategory::all();
         return view('shortcut.index', compact('shortcuts', 'categories'));
     }
 
+    public function indexByCat(Request $request)
+    {
+        $categories = Shortcutcategory::all();
+        $shortcuts = Shortcut::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
+        return view('shortcut.index', compact('shortcuts', 'categories'));
+    }
+
+
     public function admin()
     {
-        $shortcuts = Shortcut::with('category')->orderBy('name', 'asc')->get();
+        $shortcuts = Shortcut::with('category')->where('category_id', 1)->orderBy('name')->get();
         $categories = Shortcutcategory::all();
+        return view('shortcut.admin', compact('shortcuts', 'categories'));
+    }
+
+    public function adminByCat(Request $request)
+    {
+        $categories = Shortcutcategory::all();
+        $shortcuts = Shortcut::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
         return view('shortcut.admin', compact('shortcuts', 'categories'));
     }
 

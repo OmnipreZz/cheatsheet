@@ -10,15 +10,29 @@ class CommandController extends Controller
 {
     public function index()
     {
-        $commands = Command::with('category')->orderBy('name', 'asc')->get();
+        $commands = Command::with('category')->where('category_id', 1)->orderBy('name')->get();
         $categories = Commandcategory::all();
+        return view('command.index', compact('commands', 'categories'));
+    }
+
+    public function indexByCat(Request $request)
+    {
+        $categories = Commandcategory::all();
+        $commands = Command::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
         return view('command.index', compact('commands', 'categories'));
     }
 
     public function admin()
     {
-        $commands = Command::with('category')->orderBy('name', 'asc')->get();
+        $commands = Command::with('category')->where('category_id', 1)->orderBy('name')->get();
         $categories = Commandcategory::all();
+        return view('command.admin', compact('commands', 'categories'));
+    }
+
+    public function adminByCat(Request $request)
+    {
+        $categories = Commandcategory::all();
+        $commands = Command::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
         return view('command.admin', compact('commands', 'categories'));
     }
 
@@ -75,4 +89,6 @@ class CommandController extends Controller
         Command::find($id)->delete();
         return redirect()->route('command_admin');
     }
+
+    
 }

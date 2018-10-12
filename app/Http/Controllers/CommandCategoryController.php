@@ -52,4 +52,5 @@ class CommandCategoryController extends Controller
         Commandcategory::find($id)->delete();
         return redirect()->route('commandCat_admin');
     }
+
 }
