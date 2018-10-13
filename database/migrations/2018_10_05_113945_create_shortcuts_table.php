@@ -16,7 +16,7 @@ class CreateShortcutsTable extends Migration
         Schema::create('shortcuts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->text('description');
+            $table->string('description');
             $table->integer('category_id');
             $table->timestamps();
         });
