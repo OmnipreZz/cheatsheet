@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="ml-4">
-  <a class="btn btn-primary" role="button" href="{{ route('command_create') }}" title="Nouvelle commande"><i class="fas fa-plus fa-2x"></i></a>
+  <a class="btn btnGreen text-white" role="button" href="{{ route('command_create') }}" title="Créer une nouvelle commande"><i class="fas fa-plus fa-2x"></i></a>
 </div>
 
 <div class="text-center text-secondary">
@@ -45,10 +45,10 @@
   <tbody>
     @foreach ($commands as $command)
     <tr>
-      <th class="bg-secondary text-white">{{$command->name}}</th>
+      <th class="text-secondary">{{$command->name}}</th>
       <td class="text-secondary">{{$command->description}}</td>
       <td class="text-right">
-        <a href="{{route('command_edit', $command->id)}}" class="btn btn-secondary" role="button" title="Editer"><i class="fas fa-pen-square"></i></a>
+        <a href="{{route('command_edit', $command->id)}}" class="btn btn-secondary" role="button" title="Modifier"><i class="fas fa-pen-square"></i></a>
         <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm-delete">
           <i class="fas fa-times"></i>
         </button>

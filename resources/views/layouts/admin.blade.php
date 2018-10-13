@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand text-secondary" href="{{ url('/admin') }}">
+                <a class="navbar-brand text-secondary" title="Accueil" href="{{ url('/admin') }}">
                     OmniScience
                 </a>
                 <p class="navbar-text">Commands and Shorcuts</p>
@@ -43,10 +43,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="btn btnGreen text-white mr-1" type="button" href="{{ route('command_admin') }}">{{ __('Commandes') }}</a>
+                                <a class="nav-link" href="{{ route('command_admin') }}">{{ __('Commandes') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn btnGreen text-white" type="button" href="{{ route('shortcut_admin') }}">{{ __('Raccourcis') }}</a>
+                                <a class="nav-link" href="{{ route('shortcut_admin') }}">{{ __('Raccourcis') }}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -54,10 +54,10 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('commandCat_admin') }}">
-                                        {{ __('Commande') }}
+                                        {{ __('Commandes') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('shortcutCat_admin') }}">
-                                        {{ __('Raccourci') }}
+                                        {{ __('Raccourcis') }}
                                     </a>
                                 </div>
                             </li>
@@ -82,7 +82,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Se Déconnecter') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

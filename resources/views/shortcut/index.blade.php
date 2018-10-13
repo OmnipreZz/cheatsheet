@@ -40,7 +40,7 @@
   <tbody>
     @foreach ($shortcuts as $shortcut)
     <tr>
-      <th class="bg-secondary text-white">{{$shortcut->name}}</th>
+      <th class="text-secondary">{{$shortcut->name}}</th>
       <td class="text-secondary">{{$shortcut->description}}</td>
     </tr>
     @endforeach

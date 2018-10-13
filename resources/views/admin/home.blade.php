@@ -13,11 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="ml-4 mb-4">
-                        <a class="btn btnAdmin text-white" role="button" href="{{ route('command_create') }}" title="Nouvelle commande"><i class="fas fa-plus"></i> Nouvelle Commande</a>
+                    <div class="mb-4">
+                        <a class="btn btnAdmin btnGreen text-white" role="button" href="{{ route('command_create') }}" title="Créer une nouvelle commande"><i class="fas fa-plus"></i> Nouvelle Commande</a>
                     </div>
-                    <div class="ml-4">
-                        <a class="btn btnAdmin text-white" role="button" href="{{ route('shortcut_create') }}" title="Nouveau raccourci"><i class="fas fa-plus"></i> Nouveau Raccourci</a> 
+                    <div>
+                        <a class="btn btnAdmin btnGreen text-white" role="button" href="{{ route('shortcut_create') }}" title="Créer un nouveau raccourci"><i class="fas fa-plus"></i> Nouveau Raccourci</a> 
                     </div>
                 </div>
             </div>

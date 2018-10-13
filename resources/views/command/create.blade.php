@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h2 class="text-secondary">Créer une commande</h2>
+                    <h2 class="text-secondary">Créer une nouvelle commande</h2>
                 </div>
                 <div class="card-body">
 
@@ -27,7 +27,7 @@
                             <label for="content" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="content" class="form-control" name="description" rows="10" required style="resize:none;"></textarea>
+                                <textarea id="content" class="form-control" name="description" rows="5" required style="resize:none;"></textarea>
 
                             </div>
                         </div>
@@ -46,8 +46,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Envoyez') }}
+                                <button type="submit" class="btn btnGreen text-white">
+                                    {{ __('Créer') }}
                                 </button>
 
                             </div>

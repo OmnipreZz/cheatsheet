@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand text-secondary" href="{{ url('/') }}">
+                <a class="navbar-brand text-secondary" title="Accueil" href="{{ url('/') }}">
                     OmniScience
                 </a>
                 <p class="navbar-text">Commands and Shorcuts</p>

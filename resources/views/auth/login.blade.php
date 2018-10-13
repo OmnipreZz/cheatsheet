@@ -14,8 +14,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Inconsolata|Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -24,13 +23,12 @@
 <body>
 
 
-<div class="container">
+<div class="container-fluid bgHome">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center my-5">
-                <h1 id="loginTitle">OmniScience<h1>
-                <h3>Commands and Shortcuts</h3>
-                <h5>Session Admin</h5>
+                <h1 class="homeTitle pt-5">OmniScience</h1>
+                <h2 class="pt-4">Session Admin</h2>
             </div>  
                 <form method="POST" action="{{ route('login') }}" class="mx-auto">
                     @csrf
@@ -73,7 +71,7 @@
 
                     <div class="form-group row">
                         <div class="mx-auto">
-                            <button type="submit" class="btn btn-outline-success">
+                            <button type="submit" class="btn btnGreen text-white">
                                 Connexion
                             </button>
                             
@@ -82,8 +80,8 @@
 
                     <div class="form-group row">
                         <div class="mx-auto">
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                Mot de passe oublié?
+                            <a class="btn btn-link text-white" href="{{ route('password.request') }}">
+                                Mot de passe oublié ?
                             </a>
                         </div>
                     </div>

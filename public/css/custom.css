@@ -7,6 +7,16 @@
 	text-shadow: 2px 2px #4cd137;
 }
 
+.homeShadow {
+	text-shadow: 2px 2px 2px #2f3640;
+}
+
+.navbar-brand {
+	font-family: 'Audiowide', cursive;
+}
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////Button//////////////////////////////// */
 .btnGreen {
 	background-color: #4cd137;
 }
@@ -17,39 +27,21 @@
 
 .btnHome {
 	width: 25vw;
-	height: 12vh;
-	background-color: #4cd137;
+	height: 50px;
 	border-radius: 25px;
 	font-family: 'Inconsolata', monospace;
 }
 
 .btnHome:hover {
-	background-color: #44bd32;
 	box-shadow: 2px 2px 2px #2f3640;
-}
-
-.homeShadow {
-	text-shadow: 2px 2px 2px #2f3640;
-}
-
-.navbar-brand {
-	font-family: 'Audiowide', cursive;
 }
 
 .btnAdmin {
 	width: 200px;
-	background-color: #4cd137;
 }
 
-.btnAdmin:hover {
-	background-color: #44bd32;
-}
-/* /////////////////// */
-/* ///////// */
-/* ////////////////////////////////Login Page//////////////////////////////// */	
-#loginTitle {
-	font-size: 6em;
-	font-family: 'Audiowide', cursive;
+.btnMobil {
+	display: none;
 }
 /* /////////////////// */
 /* ///////// */
@@ -91,6 +83,15 @@ only screen and (max-width: 767px) {
 }
 
 @media (max-width: 767px) {
+
+	.homeTitle {
+		font-size: 4em;
+	}
+
+	.btnHome {
+		width: 35vw;
+	}
+
 	.formMedia select {
 		text-align: center;
 	}
@@ -100,19 +101,37 @@ only screen and (max-width: 767px) {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
+
+	.homeTitle {
+		font-size: 36px;
+	}
+
+	.btnHome {
+		width: 60vw;
+	}
+
     .btnAdmin {
 		width: 160px;
 		font-size: 12px;
 	}
+
+	.btnMobil {
+		display: block;
+	}
+
+	.btnApply {
+		display: none;
+	}
 }
-
-
-.test {
+/* /////////////////// */
+/* ///////// */
+/* ////////////////////////////////Home Background//////////////////////////////// */
+.bgHome {
 	width: 100vw;
 	height: 100vh;
 	color: #fff;
-	background: linear-gradient(-45deg, #f5f6fa, #7f8fa6, #353b48, #2f3640);
+	background: linear-gradient(-45deg, #dcdde1, #7f8fa6, #353b48, #2f3640);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;

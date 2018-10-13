@@ -40,7 +40,7 @@
   <tbody>
     @foreach ($commands as $command)
     <tr>
-      <th class="bg-secondary text-white">{{$command->name}}</th>
+      <th class="text-secondary">{{$command->name}}</th>
       <td class="text-secondary">{{$command->description}}</td>
     </tr>
     @endforeach

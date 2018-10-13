@@ -3,29 +3,28 @@
 @section('content')
 
 <div class="ml-4">
-  <a class="btn btn-primary" role="button" href="{{ route('shortcutCat_create') }}" title="Nouvelle commande"><i class="fas fa-plus fa-2x"></i></a>
+  <a class="btn btnGreen text-white" role="button" href="{{ route('shortcutCat_create') }}" title="Créer une nouvelle catégorie de raccourcis"><i class="fas fa-plus fa-2x"></i></a>
 </div>
 
 <div class="text-center text-secondary">
-  <h1>Categories Raccourcis</h1>
+  <h1>Categories de Raccourcis</h1>
 </div>
 
 <table class="table table-sm table-bordered table-condensed table-striped mt-4">
   <thead>
     <tr class="bg-secondary text-white">
-      <th scope="col">#</th>
       <th scope="col">Nom</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
     @foreach ($categories as $category)
     <tr>
-      <th class="bg-secondary text-white">{{$category->id}}</th>
       <td class="text-secondary">
         {{$category->name}}
       </td>
       <td class="text-right">
-        <a href="{{route('shortcutCat_edit', $category->id)}}" class="btn btn-secondary" role="button" title="Editer"><i class="fas fa-pen-square"></i></a>
+        <a href="{{route('shortcutCat_edit', $category->id)}}" class="btn btn-secondary" role="button" title="Modifier"><i class="fas fa-pen-square"></i></a>
         <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm-delete">
           <i class="fas fa-times"></i>
         </button>

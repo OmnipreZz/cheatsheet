@@ -25,8 +25,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Envoyez') }}
+                                <button type="submit" class="btn btnGreen text-white">
+                                    {{ __('Créer') }}
                                 </button>
 
                             </div>

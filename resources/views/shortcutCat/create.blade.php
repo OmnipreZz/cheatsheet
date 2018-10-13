@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h2 class="text-secondary">Créer une catégorie de raccourci</h2>
+                    <h2 class="text-secondary">Créer une nouvelle catégorie de raccourci</h2>
                 </div>
                 <div class="card-body">
 
@@ -25,8 +25,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Envoyez') }}
+                                <button type="submit" class="btn btnGreen text-white">
+                                    {{ __('Créer') }}
                                 </button>
 
                             </div>

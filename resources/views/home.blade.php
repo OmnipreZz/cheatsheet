@@ -25,12 +25,16 @@
 <body>
 
 
-<div class="container-fluid test text-center">
+<div class="container-fluid bgHome text-center">
     <h1 class="homeTitle pt-5">OmniScience</h1>
     <h2 class="pt-4 homeShadow">Commands and Shortcuts</h2>
-    <div class="pt-5">
-        <a type="button" class="btn btnHome ml-5 mt-5 text-white pt-3" href="{{ route('command_index') }}"><h3>Commandes</h3></a>
-        <a type="button" class="btn btnHome ml-5 mt-5 text-white pt-3" href="{{ route('shortcut_index') }}"><h3>Raccourcis</h3></a>
+    <div class="pt-5 mt-5 btnApply">
+        <a type="button" class="btn btnHome btnGreen mr-5  text-white pt-2" href="{{ route('command_index') }}"><h3>Commandes</h3></a>
+        <a type="button" class="btn btnHome btnGreen ml-5 text-white pt-2" href="{{ route('shortcut_index') }}"><h3>Raccourcis</h3></a>
+    </div>
+    <div class="pt-5 mt-5 btnMobil">
+        <a type="button" class="btn btnHome btnGreen text-white pt-2" href="{{ route('command_index') }}"><h3>Commandes</h3></a>
+        <a type="button" class="btn btnHome btnGreen text-white pt-2 mt-4" href="{{ route('shortcut_index') }}"><h3>Raccourcis</h3></a>
     </div>
     
 </div>
