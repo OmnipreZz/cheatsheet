@@ -14,9 +14,26 @@ class DatabaseSeeder extends Seeder
 
         // Create Admin
         DB::table('users')->insert([
-            'name' => "admin",
+            'name' => "Admin",
             'email' => 'admin@simplon.co',
             'password' => bcrypt('admin')
+        ]);
+
+        // Create Command Categories
+        DB::table('commandcategories')->insert([
+            'name' => "Linux"
+        ]);
+
+        DB::table('commandcategories')->insert([
+            'name' => "Git"
+        ]);
+
+        DB::table('commandcategories')->insert([
+            'name' => "Laravel"
+        ]);
+
+        DB::table('commandcategories')->insert([
+            'name' => "Symfony"
         ]);
         
         // Create Shortcut Categories
@@ -25,11 +42,15 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('shortcutcategories')->insert([
+            'name' => "Ubuntu"
+        ]);
+
+        DB::table('shortcutcategories')->insert([
             'name' => "VSCode"
         ]);
 
         DB::table('shortcutcategories')->insert([
-            'name' => "Ubuntu"
+            'name' => "Terminator"
         ]);
 
         // Create Shortcuts
@@ -59,37 +80,32 @@ class DatabaseSeeder extends Seeder
 
         DB::table('shortcuts')->insert([
             'name' => "Ctrl + B ",
-            'description' => "Afficher/Cacher la sidebar",
-            'category_id' => 2
-        ]);
-
-        DB::table('shortcuts')->insert([
-            'name' => "Alt + Syst + I ",
-            'description' => "Tue tous les programmes",
+            'description' => "Afficher / Cacher la sidebar",
             'category_id' => 3
         ]);
 
         DB::table('shortcuts')->insert([
-            'name' => "Alt + Syst + O ",
-            'description' => "Arrêt brutal de l'ordinateur",
-            'category_id' => 3
+            'name' => "Ctrl + Shift + E ",
+            'description' => "Scinder la fenêtre verticalement",
+            'category_id' => 4
         ]);
 
-        // Create Command Categories
-        DB::table('commandcategories')->insert([
-            'name' => "Linux"
+        DB::table('shortcuts')->insert([
+            'name' => "Ctrl + Shift + O ",
+            'description' => "Scinder la fenêtre horizontalement",
+            'category_id' => 4
         ]);
 
-        DB::table('commandcategories')->insert([
-            'name' => "Git"
+        DB::table('shortcuts')->insert([
+            'name' => "Ctrl + Shift + W ",
+            'description' => "Ferme la fenêtre courante",
+            'category_id' => 4
         ]);
 
-        DB::table('commandcategories')->insert([
-            'name' => "Laravel"
-        ]);
-
-        DB::table('commandcategories')->insert([
-            'name' => "Symfony"
+        DB::table('shortcuts')->insert([
+            'name' => "Ctrl + Shift + X ",
+            'description' => "Agrandir la fenêtre courante",
+            'category_id' => 4
         ]);
 
         // Create Commands

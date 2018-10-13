@@ -29,7 +29,7 @@
                 <a class="navbar-brand text-secondary" title="Accueil" href="{{ url('/') }}">
                     OmniScience
                 </a>
-                <p class="navbar-text">Commands and Shorcuts</p>
+                <p class="navbar-text font-italic">Commands and Shorcuts</p>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -43,10 +43,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="btn btnGreen text-white mr-1" type="button" href="{{ route('command_index') }}">{{ __('Commandes') }}</a>
+                            <a class="nav-link" href="{{ route('command_index') }}">{{ __('Commandes') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btnGreen text-white" type="button" href="{{ route('shortcut_index') }}">{{ __('Raccourcis') }}</a>
+                            <a class="nav-link" href="{{ route('shortcut_index') }}">{{ __('Raccourcis') }}</a>
                         </li>
                     </ul>
                 </div>

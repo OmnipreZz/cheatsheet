@@ -29,7 +29,7 @@
                 <a class="navbar-brand text-secondary" title="Accueil" href="{{ url('/admin') }}">
                     OmniScience
                 </a>
-                <p class="navbar-text">Commands and Shorcuts</p>
+                <p class="navbar-text font-italic">Commands and Shorcuts</p>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
