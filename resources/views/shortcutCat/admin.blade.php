@@ -24,8 +24,8 @@
         {{$category->name}}
       </td>
       <td class="text-right">
-        <a href="{{route('shortcutCat_edit', $category->id)}}" class="btn btn-secondary" role="button" title="Modifier"><i class="fas fa-pen-square"></i></a>
-        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm{{$category->id}}">
+        <a href="{{route('shortcutCat_edit', $category->id)}}" class="btn btn-secondary" role="button" title="Modifier la cétgorie"><i class="fas fa-pen-square"></i></a>
+        <button class="btn btn-danger" title="Supprimer la catégorie" data-toggle="modal" data-target="#confirm{{$category->id}}">
           <i class="fas fa-times"></i>
         </button>
         <div class="modal fade" id="confirm{{$category->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -38,8 +38,8 @@
                 <p>Supprimer la catégorie "{{$category->name}}" peut détruire la base de données</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok" href="{{route('shortcutCat_destroy', $category->id)}}">Delete</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                <a class="btn btn-danger btn-ok" href="{{route('shortcutCat_destroy', $category->id)}}">Supprimer</a>
             </div>
           </div>
           </div>

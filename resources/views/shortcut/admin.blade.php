@@ -48,8 +48,8 @@
       <th class="text-secondary">{{$shortcut->name}}</th>
       <td class="text-secondary">{{$shortcut->description}}</td>
       <td class="text-right">
-        <a href="{{route('shortcut_edit', $shortcut->id)}}" class="btn btn-secondary" role="button" title="Modifier"><i class="fas fa-pen-square"></i></a>
-        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm{{$shortcut->id}}">
+        <a href="{{route('shortcut_edit', $shortcut->id)}}" class="btn btn-secondary" role="button" title="Modifier le raccourci"><i class="fas fa-pen-square"></i></a>
+        <button class="btn btn-danger" title="Supprimer le raccourci" data-toggle="modal" data-target="#confirm{{$shortcut->id}}">
           <i class="fas fa-times"></i>
         </button>
         <div class="modal fade" id="confirm{{$shortcut->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -62,8 +62,8 @@
                 <p>Voulez vous supprimer définitivement le raccourci "{{$shortcut->name}}" ?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok" href="{{route('shortcut_destroy', $shortcut->id)}}">Delete</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                <a class="btn btn-danger btn-ok" href="{{route('shortcut_destroy', $shortcut->id)}}">Supprimer</a>
             </div>
           </div>
           </div>

@@ -20,7 +20,7 @@
         {{$user->name}}
       </th>
       <td class="text-right">
-        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm{{$user->id}}">
+        <button class="btn btn-danger" title="Supprimer l'utilisateur" data-toggle="modal" data-target="#confirm{{$user->id}}">
           <i class="fas fa-times"></i>
         </button>
         <div class="modal fade" id="confirm{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -33,7 +33,7 @@
                 <p>Voulez vous vraiment supprimer l'utilisateur " {{$user->name}} " ?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
                 <a class="btn btn-danger btn-ok" href="{{ route('admin_destroy', $user->id) }}">Supprimer</a>
             </div>
           </div>

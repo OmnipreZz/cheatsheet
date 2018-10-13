@@ -48,8 +48,8 @@
       <th class="text-secondary">{{$command->name}}</th>
       <td class="text-secondary">{{$command->description}}</td>
       <td class="text-right">
-        <a href="{{route('command_edit', $command->id)}}" class="btn btn-secondary" role="button" title="Modifier"><i class="fas fa-pen-square"></i></a>
-        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm{{$command->id}}">
+        <a href="{{route('command_edit', $command->id)}}" class="btn btn-secondary" role="button" title="Modifier la commande"><i class="fas fa-pen-square"></i></a>
+        <button class="btn btn-danger" title="Supprimer la commande" data-toggle="modal" data-target="#confirm{{$command->id}}">
           <i class="fas fa-times"></i>
         </button>
         <div class="modal fade" id="confirm{{$command->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -62,7 +62,7 @@
                 <p>Voulez vous supprimer définitivement la commande "{{$command->name}}" ?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
                 <a class="btn btn-danger btn-ok" href="{{route('command_destroy', $command->id)}}">Supprimer</a>
             </div>
           </div>
