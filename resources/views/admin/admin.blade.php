@@ -20,21 +20,21 @@
         {{$user->name}}
       </th>
       <td class="text-right">
-        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm-delete">
+        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm{{$user->id}}">
           <i class="fas fa-times"></i>
         </button>
-        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="confirm{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h2>Supprimer !!!</h2>
+              <h2 class="text-danger">Supprimer</h2>
             </div>
             <div class="modal-body">
-                Voulez vous vraiment supprimer cet utilisateur ?
+                <p>Voulez vous vraiment supprimer l'utilisateur " {{$user->name}} " ?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok" href="{{route('admin_destroy', $user->id)}">Delete</a>
+                <a class="btn btn-danger btn-ok" href="{{ route('admin_destroy', $user->id) }}">Supprimer</a>
             </div>
           </div>
           </div>

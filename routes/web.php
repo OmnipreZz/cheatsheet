@@ -34,7 +34,7 @@ Route::get('/admin/users', 'AdminController@admin' )->name('admin_admin')->middl
 Route::get('/register', 'AdminController@register' )->name('admin_register')->middleware('auth');
 Route::post('/register/create', 'AdminController@store' )->name('admin_store')->middleware('auth');
 // users destroy
-Route::get('/admin/users/destroy{id}', 'adminController@destroy')->name('users_destroy')->middleware('auth');
+Route::get('/admin/users/destroy{id}', 'AdminController@destroy')->name('admin_destroy')->middleware('auth');
 
 // shortcuts admin index 
 Route::get('/admin/shortcut', 'ShortcutController@admin' )->name('shortcut_admin')->middleware('auth');

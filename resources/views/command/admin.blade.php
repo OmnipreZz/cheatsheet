@@ -63,7 +63,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok" href="{{route('command_destroy', $command->id)}}">Delete</a>
+                <a class="btn btn-danger btn-ok" href="{{route('command_destroy', $command->id)}}">Supprimer</a>
             </div>
           </div>
           </div>
