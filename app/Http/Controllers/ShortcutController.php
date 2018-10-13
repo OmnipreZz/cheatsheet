@@ -14,14 +14,14 @@ class ShortcutController extends Controller
     public function index()
     {
         $shortcuts = Shortcut::with('category')->where('category_id', 1)->orderBy('name')->get();
-        $categories = Shortcutcategory::all();
+        $categories = Shortcutcategory::orderBy('name')->get();
         $hisCategory = 1;
         return view('shortcut.index', compact('shortcuts', 'categories', 'hisCategory'));
     }
 
     public function indexByCat(Request $request)
     {
-        $categories = Shortcutcategory::all();
+        $categories = Shortcutcategory::orderBy('name')->get();
         $shortcuts = Shortcut::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
         $hisCategory = $request->input('category');
         return view('shortcut.index', compact('shortcuts', 'categories', 'hisCategory'));
@@ -31,14 +31,14 @@ class ShortcutController extends Controller
     public function admin()
     {
         $shortcuts = Shortcut::with('category')->where('category_id', 1)->orderBy('name')->get();
-        $categories = Shortcutcategory::all();
+        $categories = Shortcutcategory::orderBy('name')->get();
         $hisCategory = 1;
         return view('shortcut.admin', compact('shortcuts', 'categories', 'hisCategory'));
     }
 
     public function adminByCat(Request $request)
     {
-        $categories = Shortcutcategory::all();
+        $categories = Shortcutcategory::orderBy('name')->get();
         $shortcuts = Shortcut::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
         $hisCategory = $request->input('category');
         return view('shortcut.admin', compact('shortcuts', 'categories', 'hisCategory'));
@@ -47,7 +47,7 @@ class ShortcutController extends Controller
 
     public function create()
     {
-        $categories = Shortcutcategory::all();
+        $categories = Shortcutcategory::orderBy('name')->get();
         return view('shortcut.create', compact('categories'));
     }
 
@@ -73,7 +73,7 @@ class ShortcutController extends Controller
     public function edit($id)
     {
         $shortcut = Shortcut::findOrFail($id);
-        $categories = Shortcutcategory::all();
+        $categories = Shortcutcategory::orderBy('name')->get();
         $hisCategory = $shortcut->category;
         return view('shortcut.edit', compact('shortcut', 'categories', 'hisCategory'));
     }

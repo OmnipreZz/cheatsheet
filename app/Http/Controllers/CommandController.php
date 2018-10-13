@@ -11,14 +11,14 @@ class CommandController extends Controller
     public function index()
     {
         $commands = Command::with('category')->where('category_id', 1)->orderBy('name')->get();
-        $categories = Commandcategory::all();
+        $categories = Commandcategory::orderBy('name')->get();
         $hisCategory = 1;
         return view('command.index', compact('commands', 'categories', 'hisCategory'));
     }
 
     public function indexByCat(Request $request)
     {
-        $categories = Commandcategory::all();
+        $categories = Commandcategory::orderBy('name')->get();
         $commands = Command::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
         $hisCategory = $request->input('category');
         return view('command.index', compact('commands', 'categories', 'hisCategory'));
@@ -27,14 +27,14 @@ class CommandController extends Controller
     public function admin()
     {
         $commands = Command::with('category')->where('category_id', 1)->orderBy('name')->get();
-        $categories = Commandcategory::all();
+        $categories = Commandcategory::orderBy('name')->get();
         $hisCategory = 1;
         return view('command.admin', compact('commands', 'categories', 'hisCategory'));
     }
 
     public function adminByCat(Request $request)
     {
-        $categories = Commandcategory::all();
+        $categories = Commandcategory::orderBy('name')->get();
         $commands = Command::with('category')->where('category_id', $request->input('category') )->orderBy('name')->get();
         $hisCategory = $request->input('category');
         return view('command.admin', compact('commands', 'categories', 'hisCategory'));
@@ -43,7 +43,7 @@ class CommandController extends Controller
 
     public function create()
     {
-        $categories = Commandcategory::all();
+        $categories = Commandcategory::orderBy('name')->get();
         return view('command.create', compact('categories'));
     }
 
@@ -63,7 +63,7 @@ class CommandController extends Controller
     public function edit($id)
     {
         $command = Command::findOrFail($id);
-        $categories = Commandcategory::all();
+        $categories = Commandcategory::orderBy('name')->get();
         $hisCategory = $command->category;
         return view('command.edit', compact('command', 'categories', 'hisCategory'));
     }
