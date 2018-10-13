@@ -25,17 +25,17 @@
       </th>
       <td class="text-right">
         <a href="{{route('commandCat_edit', $category->id)}}" class="btn btn-secondary" role="button" title="Modifier"><i class="fas fa-pen-square"></i></a>
-        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm-delete">
+        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm{{$category->id}}">
           <i class="fas fa-times"></i>
         </button>
-        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="confirm{{$category->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h2>Attention !!!</h2>
+              <h2 class="text-danger">Attention !!!</h2>
             </div>
             <div class="modal-body">
-                Supprimer une catégorie peut détruire la bdd
+                <p>Supprimer la catégorie "{{$category->name}}" peut détruire la base de données</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

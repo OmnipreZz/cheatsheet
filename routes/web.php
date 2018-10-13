@@ -28,8 +28,13 @@ Route::Post('/command/category','CommandController@indexByCat')->name('command_c
 ///////////////////////////ADMIN///////////////////////////
 Auth::routes();
 
-Route::get('/admin', 'AdminController@index' )->middleware('auth');
+Route::get('/admin', 'AdminController@index' )->name('admin_home')->middleware('auth');
+Route::get('/admin/users', 'AdminController@admin' )->name('admin_admin')->middleware('auth');
+// users register
 Route::get('/register', 'AdminController@register' )->name('admin_register')->middleware('auth');
+Route::post('/register/create', 'AdminController@store' )->name('admin_store')->middleware('auth');
+// users destroy
+Route::get('/admin/users/destroy{id}', 'adminController@destroy')->name('users_destroy')->middleware('auth');
 
 // shortcuts admin index 
 Route::get('/admin/shortcut', 'ShortcutController@admin' )->name('shortcut_admin')->middleware('auth');
@@ -41,7 +46,7 @@ Route::post('/admin/shortcut/store', 'ShortcutController@store')->name('shortcut
 Route::get('/admin/shortcut/edit{id}', 'ShortcutController@edit')->name('shortcut_edit')->middleware('auth');
 Route::post('/admin/shortcut/update{id}', 'ShortcutController@update')->name('shortcut_update')->middleware('auth');
 // shortcuts destroy
-Route::get('/admin/shortcut/destroy/{id}', 'ShortcutController@destroy')->name('shortcut_destroy')->middleware('auth');
+Route::get('/admin/shortcut/destroy{id}', 'ShortcutController@destroy')->name('shortcut_destroy')->middleware('auth');
 
 // shortcutCat admin index 
 Route::get('/admin/shortcut/indexcategory', 'ShortcutCategoryController@admin' )->name('shortcutCat_admin')->middleware('auth');
@@ -52,7 +57,7 @@ Route::post('/admin/shortcut/category/store', 'ShortcutCategoryController@store'
 Route::get('/admin/shortcut/category/edit{id}', 'ShortcutCategoryController@edit')->name('shortcutCat_edit')->middleware('auth');
 Route::post('/admin/shortcut/category/update{id}', 'ShortcutCategoryController@update')->name('shortcutCat_update')->middleware('auth');
 // shortcutCat destroy
-Route::get('/admin/shortcut/category/destroy/{id}', 'ShortcutCategoryController@destroy')->name('shortcutCat_destroy')->middleware('auth');
+Route::get('/admin/shortcut/category/destroy{id}', 'ShortcutCategoryController@destroy')->name('shortcutCat_destroy')->middleware('auth');
 
 // commands admin index 
 Route::get('/admin/command', 'CommandController@admin' )->name('command_admin')->middleware('auth');
@@ -64,7 +69,7 @@ Route::post('/admin/command/store', 'CommandController@store')->name('command_st
 Route::get('/admin/command/edit{id}', 'CommandController@edit')->name('command_edit')->middleware('auth');
 Route::post('/admin/command/update{id}', 'CommandController@update')->name('command_update')->middleware('auth');
 // commands destroy
-Route::get('/admin/command/destroy/{id}', 'CommandController@destroy')->name('command_destroy')->middleware('auth');
+Route::get('/admin/command/destroy{id}', 'CommandController@destroy')->name('command_destroy')->middleware('auth');
 
 // commandCat admin index 
 Route::get('/admin/command/indexcategory', 'CommandCategoryController@admin' )->name('commandCat_admin')->middleware('auth');
@@ -75,6 +80,6 @@ Route::post('/admin/command/category/store', 'CommandCategoryController@store')-
 Route::get('/admin/command/category/edit{id}', 'CommandCategoryController@edit')->name('commandCat_edit')->middleware('auth');
 Route::post('/admin/command/category/update{id}', 'CommandCategoryController@update')->name('commandCat_update')->middleware('auth');
 // commandCat destroy
-Route::get('/admin/command/category/destroy/{id}', 'CommandCategoryController@destroy')->name('commandCat_destroy')->middleware('auth');
+Route::get('/admin/command/category/destroy{id}', 'CommandCategoryController@destroy')->name('commandCat_destroy')->middleware('auth');
 
 

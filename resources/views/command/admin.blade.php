@@ -49,17 +49,17 @@
       <td class="text-secondary">{{$command->description}}</td>
       <td class="text-right">
         <a href="{{route('command_edit', $command->id)}}" class="btn btn-secondary" role="button" title="Modifier"><i class="fas fa-pen-square"></i></a>
-        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm-delete">
+        <button class="btn btn-danger" title="Supprimer" data-toggle="modal" data-target="#confirm{{$command->id}}">
           <i class="fas fa-times"></i>
         </button>
-        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="confirm{{$command->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h2>Supprimer</h2>
+              <h2 class="text-danger">Supprimer</h2>
             </div>
             <div class="modal-body">
-                Voulez vous vraiment supprimmer cette commande ?
+                <p>Voulez vous supprimer définitivement la commande "{{$command->name}}" ?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
