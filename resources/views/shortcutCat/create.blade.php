@@ -15,7 +15,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="title" class="col-sm-4 col-form-label text-md-right">{{ __('Nom') }}</label>
+                            <label for="title" class="col-sm-4 col-form-label text-md-right">{{ __('Nom') }} :</label>
 
                             <div class="col-md-6">
                                 <input id="title" type="text" class="form-control" name="name" required autofocus>

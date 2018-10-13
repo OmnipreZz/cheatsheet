@@ -15,7 +15,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="title" class="col-sm-4 col-form-label text-md-right">{{ __('Nom') }}</label>
+                            <label for="title" class="col-sm-4 col-form-label text-md-right">{{ __('Nom') }} :</label>
 
                             <div class="col-md-6">
                                 <input id="title" type="text" class="form-control" name="name" required autofocus>
@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="content" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
+                            <label for="content" class="col-md-4 col-form-label text-md-right">{{ __('Description') }} :</label>
 
                             <div class="col-md-6">
                                 <textarea id="content" class="form-control" name="description" rows="5" required style="resize:none;"></textarea>
@@ -33,7 +33,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="category"class="col-md-4 col-form-label text-md-right">{{ __('Catégories') }}</label>
+                            <label for="category"class="col-md-4 col-form-label text-md-right">{{ __('Catégorie') }} :</label>
                             <select name="category" class="form-control col-md-6" id="category">
                             
                                 <option>Choisissez une catégorie</option>
